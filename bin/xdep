@@ -139,6 +139,7 @@ function init(optParser, packageJson) {
     sshs(targetConf.ssh, [
       "mkdir -p " + destAppPath,
       "git clone -b " + branch + " "+ repoUrl + " " + destAppPath,
+      "mkdir -p " + appDir + '/log',
       "cd " + appDir,
       "npm install"
     ]);
