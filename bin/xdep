@@ -229,7 +229,7 @@ function deploy(optParser, packageJson) {
     sshs(targetConf.ssh, [
       "cd " + appPath(packageJson, targetName),
       "git fetch",
-      "git checkout " + branch,
+      "git checkout origin/" + branch,
       "git submodule update",
       "cd " + appPath(packageJson, targetName, appDir),
       // "npm prune",
